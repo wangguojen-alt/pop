@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王國鎮 David | 個人專屬首頁</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            warmWhite: '#FAF6F0', // 溫潤米白底色
+                            creamCard: '#F4EFE6',  // 卡片底色
+                            accent: '#8C6239',     // 精緻暖棕點綴色
+                            darkText: '#2D2924',   // 深碳褐文字色
+                            mutedText: '#6B6255',  // 輔助文字色
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons for Modern look -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-brand-warmWhite text-brand-darkText min-h-screen font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- 頂部漸變裝飾條 -->
+    <div class="h-2 w-full bg-gradient-to-r from-brand-accent via-amber-700 to-brand-accent"></div>
+
+    <!-- 主要容器 -->
+    <main class="max-w-3xl mx-auto px-6 py-12 md:py-20 flex flex-col gap-16">
+
+        <!-- 1. 英雄 Header 區域: 姓名與一句話定位 -->
+        <header class="flex flex-col gap-6 animate-fade-in">
+            <div class="flex items-center gap-4">
+                <!-- 質感文字大頭貼縮寫 -->
+                <div class="w-16 h-16 rounded-full bg-brand-accent flex items-center justify-center text-white text-2xl font-bold shadow-md">
+                    國鎮
+                </div>
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">王國鎮</h1>
+                    <p class="text-brand-accent font-medium text-lg mt-0.5">David Wang</p>
+                </div>
+            </div>
+            
+            <div class="border-l-4 border-brand-accent pl-4 py-1">
+                <p class="text-xl md:text-2xl font-medium leading-relaxed text-brand-darkText">
+                    「融合十年半導體設備淬鍊與 AI 數位辦公實務的跨界技術專才。」
+                </p>
+            </div>
+        </header>
+
+        <!-- 2. 關於我 About Me -->
+        <section class="flex flex-col gap-4">
+            <h2 class="text-xs font-semibold tracking-wider uppercase text-brand-accent flex items-center gap-2">
+                <i data-lucide="user" class="w-4 h-4"></i> 關於我 / Profile
+            </h2>
+            <div class="text-base md:text-lg leading-relaxed text-brand-mutedText flex flex-col gap-4">
+                <p>
+                    畢業於<span class="text-brand-darkText font-semibold">清雲科技大學資訊工程系</span>，具備深厚的邏輯推導與系統化思考能力。曾於<span class="text-brand-darkText font-semibold">日月光半導體</span>擔任設備工程師逾 10 年，長期專注於高精密自動化設備維護、OEE 稼動率優化、異常排除及標準化 SOP 編製，歷練出在高度壓力下維持穩定輸出的卓越特質。
+                </p>
+                <p>
+                    為迎接數位轉型浪潮，近期於健行科技大學完成 400 小時的<span class="text-brand-darkText font-semibold">「數位辦公與 AI 應用培訓」</span>，熟練掌握生成式 AI 輔助流程、數據處理工具與行政辦公自動化。我致力將多年嚴謹的工程維護思維與全新 AI 數位工具相結合，為企業產線運作及行政流程帶來創新且穩定的雙重價值。
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. 三項專業技能 Skills -->
+        <section class="flex flex-col gap-6">
+            <h2 class="text-xs font-semibold tracking-wider uppercase text-brand-accent flex items-center gap-2">
+                <i data-lucide="cpu" class="w-4 h-4"></i> 核心技能 / Core Skills
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- 技能 1 -->
+                <div class="bg-brand-creamCard p-6 rounded-2xl flex flex-col gap-3 shadow-sm hover:shadow-md transition duration-300 border border-[#E9E1D3]">
+                    <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-accent">
+                        <i data-lucide="wrench" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold">精密設備故障排除</h3>
+                    <p class="text-sm text-brand-mutedText leading-relaxed">
+                        精通封測廠自動化機構，善用數據分析定位根本原因，優化 MTBA、降低停機時間並極大化生產 OEE。
+                    </p>
+                </div>
+
+                <!-- 技能 2 -->
+                <div class="bg-brand-creamCard p-6 rounded-2xl flex flex-col gap-3 shadow-sm hover:shadow-md transition duration-300 border border-[#E9E1D3]">
+                    <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-accent">
+                        <i data-lucide="sparkles" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold">AI 輔助與數位辦公</h3>
+                    <p class="text-sm text-brand-mutedText leading-relaxed">
+                        運用 AI 協同工作、流程優化，熟練掌握 Excel、Word、PowerPoint 等辦公工具，加速行政與資料處理效率。
+                    </p>
+                </div>
+
+                <!-- 技能 3 -->
+                <div class="bg-brand-creamCard p-6 rounded-2xl flex flex-col gap-3 shadow-sm hover:shadow-md transition duration-300 border border-[#E9E1D3]">
+                    <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-accent">
+                        <i data-lucide="file-text" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold">SOP 編製與傳承</h3>
+                    <p class="text-sm text-brand-mutedText leading-relaxed">
+                        將複雜維修經驗轉化為圖文並茂的標準作業程序（SOP），建立故障案例庫，有效帶領新人縮短學習曲線。
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. 三個作品/實績占位區 Portfolio -->
+        <section class="flex flex-col gap-6">
+            <h2 class="text-xs font-semibold tracking-wider uppercase text-brand-accent flex items-center gap-2">
+                <i data-lucide="briefcase" class="w-4 h-4"></i> 專案實績與作品 / Key Projects
+            </h2>
+            <div class="flex flex-col gap-6">
+                
+                <!-- 作品 1 -->
+                <div class="group bg-brand-creamCard/40 hover:bg-brand-creamCard p-6 rounded-2xl border border-dashed border-[#DDD5C5] hover:border-solid hover:border-[#C4B79E] transition duration-300 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-xs font-medium text-brand-accent">設備與產能優化專案</span>
+                        <h3 class="text-xl font-bold group-hover:text-brand-accent transition">日月光設備稼動率優化與改善</h3>
+                        <p class="text-sm text-brand-mutedText max-w-xl">
+                            分析瓶頸站點，透過優化上料機構與調教軟硬體參數減少待料，落實 LOTO 安全程序與 5S 管理，成功達成 OEE 極大化指標。
+                        </p>
+                    </div>
+                    <div class="w-full md:w-auto px-4 py-2 bg-white/80 rounded-lg text-xs font-semibold text-center text-brand-accent border border-[#E2D8C5] shadow-sm">
+                        十年工程實績
+                    </div>
+                </div>
+
+                <!-- 作品 2 -->
+                <div class="group bg-brand-creamCard/40 hover:bg-brand-creamCard p-6 rounded-2xl border border-dashed border-[#DDD5C5] hover:border-solid hover:border-[#C4B79E] transition duration-300 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-xs font-medium text-brand-accent">技術與標準化專案</span>
+                        <h3 class="text-xl font-bold group-hover:text-brand-accent transition">高精密機台故障案例庫與圖文 SOP</h3>
+                        <p class="text-sm text-brand-mutedText max-w-xl">
+                            將 10 年高精度封測機台的維修與異常排除邏輯轉化為精確的圖文 SOP，建立完整案例庫，縮短團隊新人培訓期的學習曲線。
+                        </p>
+                    </div>
+                    <div class="w-full md:w-auto px-4 py-2 bg-white/80 rounded-lg text-xs font-semibold text-center text-brand-accent border border-[#E2D8C5] shadow-sm">
+                        知識技術傳承
+                    </div>
+                </div>
+
+                <!-- 作品 3 -->
+                <div class="group bg-brand-creamCard/40 hover:bg-brand-creamCard p-6 rounded-2xl border border-dashed border-[#DDD5C5] hover:border-solid hover:border-[#C4B79E] transition duration-300 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-xs font-medium text-brand-accent">數位化轉型實務</span>
+                        <h3 class="text-xl font-bold group-hover:text-brand-accent transition">AI 數位辦公與行政效率整合應用</h3>
+                        <p class="text-sm text-brand-mutedText max-w-xl">
+                            結合健行科大 400 小時專業職訓，活用 AI 輔助工作流，將數據分析與常規文書自動化，展示資工專業與現代辦公的絕佳融合。
+                        </p>
+                    </div>
+                    <div class="w-full md:w-auto px-4 py-2 bg-white/80 rounded-lg text-xs font-semibold text-center text-brand-accent border border-[#E2D8C5] shadow-sm">
+                        職訓結業成果
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. 聯絡方式 Contact -->
+        <section class="bg-brand-creamCard p-8 rounded-3xl border border-[#E9E1D3] flex flex-col gap-6">
+            <div>
+                <h2 class="text-2xl font-bold">與我聯絡</h2>
+                <p class="text-sm text-brand-mutedText mt-1">期待您的來信與指教，我將盡快回覆您！</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- 電話 -->
+                <a href="tel:0910097334" class="flex items-center gap-4 p-4 bg-white/55 rounded-xl hover:bg-white transition duration-200">
+                    <div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs text-brand-mutedText block">行動電話</span>
+                        <span class="text-base font-semibold text-brand-darkText">0910-097-334</span>
+                    </div>
+                </a>
+
+                <!-- 信箱 -->
+                <div class="flex items-center justify-between p-4 bg-white/55 rounded-xl hover:bg-white transition duration-200 group">
+                    <a href="mailto:wangguojen@gmail.com" class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-brand-mutedText block">電子郵件</span>
+                            <span class="text-base font-semibold text-brand-darkText break-all">wangguojen@gmail.com</span>
+                        </div>
+                    </a>
+                    <!-- 複製功能 -->
+                    <button onclick="copyToClipboard('wangguojen@gmail.com')" class="p-2 text-brand-mutedText hover:text-brand-accent rounded-lg hover:bg-brand-warmWhite transition" title="複製信箱">
+                        <i data-lucide="copy" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- 地區 -->
+                <div class="flex items-center gap-4 p-4 bg-white/55 rounded-xl">
+                    <div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs text-brand-mutedText block">居住地區</span>
+                        <span class="text-base font-semibold text-brand-darkText">桃園市平鎮區</span>
+                    </div>
+                </div>
+
+                <!-- 應徵職缺 -->
+                <div class="flex items-center gap-4 p-4 bg-white/55 rounded-xl">
+                    <div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent">
+                        <i data-lucide="briefcase" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs text-brand-mutedText block">應徵職務</span>
+                        <span class="text-base font-semibold text-brand-darkText">技術員、行政助理</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 自訂複製成功提示框 -->
+            <div id="toast" class="hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-stone-800 text-white text-sm px-4 py-2.5 rounded-full shadow-lg items-center gap-2 animate-bounce transition-all">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                <span>信箱已成功複製到剪貼簿！</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 底部資訊 -->
+    <footer class="text-center py-8 border-t border-[#E9E1D3] text-xs text-brand-mutedText">
+        <p>© 2026 王國鎮 David Wang. All Rights Reserved.</p>
+    </footer>
+
+    <!-- 初始化圖標與 JS 功能 -->
+    <script>
+        // 初始化 Lucide 圖標
+        lucide.createIcons();
+
+        // 複製信箱功能
+        function copyToClipboard(text) {
+            // 使用相容性較高的傳統複製法
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showToast();
+                }
+            } catch (err) {
+                console.error('無法複製', err);
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        // 顯示複製提示
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
