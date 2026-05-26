@@ -37,16 +37,28 @@
     <!-- 主要容器 -->
     <main class="max-w-3xl mx-auto px-6 py-12 md:py-20 flex flex-col gap-16">
 
-        <!-- 1. 英雄 Header 區域: 姓名與一句話定位 -->
+        <!-- 1. 英雄 Header 區域: 姓名、定位與個人相片 -->
         <header class="flex flex-col gap-6 animate-fade-in">
-            <div class="flex items-center gap-4">
-                <!-- 質感文字大頭貼縮寫 -->
-                <div class="w-16 h-16 rounded-full bg-brand-accent flex items-center justify-center text-white text-2xl font-bold shadow-md">
-                    國鎮
+            <div class="flex flex-col-reverse sm:flex-row justify-between items-start sm:items-center gap-6 pb-6 border-b border-[#E9E1D3]">
+                <!-- 左側：姓名與定位 -->
+                <div class="flex flex-col gap-2">
+                    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">王國鎮</h1>
+                    <p class="text-brand-accent font-semibold text-xl">David Wang</p>
+                    <div class="inline-flex items-center gap-2 mt-2 px-3 py-1 bg-brand-creamCard text-brand-accent text-xs font-semibold rounded-full w-fit border border-[#E2D8C5]">
+                        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> 設備管理 & AI 跨界專才
+                    </div>
                 </div>
-                <div>
-                    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">王國鎮</h1>
-                    <p class="text-brand-accent font-medium text-lg mt-0.5">David Wang</p>
+                
+                <!-- 右側：個人相片 (支援 AA001 檔案並具備自動防錯 fallback 機制) -->
+                <div class="relative flex-shrink-0 self-center sm:self-auto">
+                    <!-- 相片元素 -->
+                    <img src="AA001" id="profile-img" onerror="handleImageError(this)" class="w-28 h-28 md:w-32 md:h-32 object-cover rounded-2xl border-4 border-brand-accent/20 hover:border-brand-accent shadow-md transition duration-300 hover:scale-105" alt="王國鎮 David">
+                    
+                    <!-- 備用文字頭像 (預設隱藏，僅在圖片完全無法載入時自動顯示) -->
+                    <div id="avatar-fallback" class="hidden w-28 h-28 md:w-32 md:h-32 rounded-2xl bg-brand-accent flex flex-col items-center justify-center text-white text-3xl font-bold shadow-md">
+                        <span>國鎮</span>
+                        <span class="text-xs tracking-wider opacity-80 mt-1">David</span>
+                    </div>
                 </div>
             </div>
             
@@ -156,7 +168,7 @@
                         <span class="text-xs font-medium text-brand-accent">數位化轉型實務</span>
                         <h3 class="text-xl font-bold group-hover:text-brand-accent transition">AI 數位辦公與行政效率整合應用</h3>
                         <p class="text-sm text-brand-mutedText max-w-xl">
-                            結合健行科大 400 小時專業職訓，活用 AI 輔助工作流，將數據分析與常規文書自動化，展示資工專業與現代辦公的絕佳融合。
+                            結合健行科大 400 小時專業職訓，活用 AI 輔助工作流，將數據 analysis 與常規文書自動化，展示資工專業與現代辦公的絕佳融合。
                         </p>
                     </div>
                     <div class="w-full md:w-auto px-4 py-2 bg-white/80 rounded-lg text-xs font-semibold text-center text-brand-accent border border-[#E2D8C5] shadow-sm">
@@ -246,6 +258,25 @@
     <script>
         // 初始化 Lucide 圖標
         lucide.createIcons();
+
+        // 智慧型圖片載入與防錯 fallback 機制
+        function handleImageError(img) {
+            const currentSrc = img.getAttribute('src');
+            
+            // 嘗試載入不同格式
+            if (currentSrc === 'AA001') {
+                img.src = 'AA001.png';
+            } else if (currentSrc === 'AA001.png') {
+                img.src = 'AA001.jpg';
+            } else if (currentSrc === 'AA001.jpg') {
+                img.src = 'AA001.jpeg';
+            } else {
+                // 如果所有圖片格式都載入失敗，隱藏 <img> 並顯示設計精美的文字大頭貼
+                img.style.display = 'none';
+                document.getElementById('avatar-fallback').classList.remove('hidden');
+                document.getElementById('avatar-fallback').classList.add('flex');
+            }
+        }
 
         // 複製信箱功能
         function copyToClipboard(text) {
