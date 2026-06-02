@@ -98,7 +98,7 @@
                     </div>
                     <h3 class="text-lg font-bold">精密設備故障排除</h3>
                     <p class="text-sm text-brand-mutedText leading-relaxed">
-                        精通封測廠自動化機構，善用數據分析定位根本原因，優化 MTBA、降低停機時間並極大化生產 OEE。
+                        精通封測廠自動化機構，善用數據 analysis 定位根本原因，優化 MTBA、降低停機時間並極大化生產 OEE。
                     </p>
                 </div>
 
@@ -227,9 +227,47 @@
                     </div>
                 </div>
 
-                <!-- 應徵職缺 -->
+                <!-- LINE 聯絡 -->
+                <a href="https://line.me/ti/p/~wangguojen" target="_blank" class="flex items-center justify-between p-4 bg-white/55 rounded-xl hover:bg-white transition duration-200 group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent">
+                            <i data-lucide="message-square" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-brand-mutedText block">LINE 聯絡</span>
+                            <span class="text-base font-semibold text-brand-darkText">ID: wangguojen</span>
+                        </div>
+                    </div>
+                    <div class="text-brand-mutedText group-hover:text-brand-accent transition">
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </div>
+                </a>
+
+                <!-- 專業證照 / 培訓 -->
                 <div class="flex items-center gap-4 p-4 bg-white/55 rounded-xl">
                     <div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent">
+                        <i data-lucide="award" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs text-brand-mutedText block">專業證照 / 培訓經歷</span>
+                        <span class="text-base font-semibold text-brand-darkText">數位辦公與 AI 應用培訓</span>
+                    </div>
+                </div>
+
+                <!-- 學歷背景 -->
+                <div class="flex items-center gap-4 p-4 bg-white/55 rounded-xl">
+                    <div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent">
+                        <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs text-brand-mutedText block">學歷背景</span>
+                        <span class="text-base font-semibold text-brand-darkText">清雲科技大學 資工系</span>
+                    </div>
+                </div>
+
+                <!-- 應徵職缺 -->
+                <div class="flex items-center gap-4 p-4 bg-white/55 rounded-xl col-span-1 md:col-span-2">
+                    <div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent flex-shrink-0">
                         <i data-lucide="briefcase" class="w-5 h-5"></i>
                     </div>
                     <div>
@@ -243,7 +281,55 @@
             <!-- 自訂複製成功提示框 -->
             <div id="toast" class="hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-stone-800 text-white text-sm px-4 py-2.5 rounded-full shadow-lg items-center gap-2 animate-bounce transition-all">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
-                <span>信箱已成功複製到剪貼簿！</span>
+                <span id="toast-message">信箱已成功複製到剪貼簿！</span>
+            </div>
+        </section>
+
+        <!-- 6. 全新獨立：個人證照區塊 -->
+        <section class="flex flex-col gap-6 animate-fade-in">
+            <h2 class="text-xs font-semibold tracking-wider uppercase text-brand-accent flex items-center gap-2">
+                <i data-lucide="award" class="w-4 h-4"></i> 專業證照 / Certificates
+            </h2>
+            
+            <div class="bg-[#F4EFE6] border border-[#E9E1D3] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 hover:shadow-lg transition duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-[#EFE9DD] flex items-center justify-center text-[#8C6239] shrink-0">
+                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-brand-darkText">
+                        個人證照
+                    </h3>
+                </div>
+                
+                <!-- 證照按鈕 -->
+                <button onclick="showCertNotification()" class="w-full md:w-auto inline-flex items-center justify-center gap-3 px-6 py-4 bg-brand-accent hover:bg-[#734e2c] text-white font-bold rounded-2xl shadow-md transition duration-300 group">
+                    <span class="whitespace-nowrap">證照</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- 7. 全新獨立：個人作品集區塊 -->
+        <section class="flex flex-col gap-6 animate-fade-in">
+            <h2 class="text-xs font-semibold tracking-wider uppercase text-brand-accent flex items-center gap-2">
+                <i data-lucide="globe" class="w-4 h-4"></i> 線上作品集 / Online Portfolio
+            </h2>
+            
+            <div class="bg-[#F4EFE6] border border-[#E9E1D3] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 hover:shadow-lg transition duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-[#EFE9DD] flex items-center justify-center text-[#8C6239] shrink-0">
+                        <i data-lucide="folder-heart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-brand-darkText">
+                        個人作品集
+                    </h3>
+                </div>
+                
+                <!-- 作品集按鈕 -->
+                <a href="https://github.com/wangguojen" target="_blank" class="w-full md:w-auto inline-flex items-center justify-center gap-3 px-6 py-4 bg-brand-accent hover:bg-[#734e2c] text-white font-bold rounded-2xl shadow-md transition duration-300 group">
+                    <span class="whitespace-nowrap">作品集</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                </a>
             </div>
         </section>
 
@@ -283,7 +369,7 @@
             try {
                 const successful = document.execCommand('copy');
                 if (successful) {
-                    showToast();
+                    showToast('信箱已成功複製到剪貼簿！');
                 }
             } catch (err) {
                 console.error('無法複製', err);
@@ -291,16 +377,24 @@
             document.body.removeChild(tempInput);
         }
 
-        // 顯示複製提示
-        function showToast() {
+        // 點擊證照時顯示動態提示
+        function showCertNotification() {
+            showToast('受訓與專業結業證書已備妥，可隨時應徵提供備查！');
+        }
+
+        // 顯示複製或通知提示
+        function showToast(message) {
             const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            
+            toastMessage.textContent = message;
             toast.classList.remove('hidden');
             toast.classList.add('flex');
             
             setTimeout(() => {
                 toast.classList.add('hidden');
                 toast.classList.remove('flex');
-            }, 2500);
+            }, 3000);
         }
     </script>
 </body>
