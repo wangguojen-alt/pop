@@ -20,7 +20,7 @@
                         }
                     },
                     fontFamily: {
-                        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
                     }
                 }
             }
@@ -40,15 +40,15 @@
         <header class="flex flex-col gap-6">
             <div class="flex flex-col-reverse sm:flex-row justify-between items-start sm:items-center gap-6 pb-6 border-b border-[#E9E1D3]">
                 <div class="flex flex-col gap-2">
-                    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">王國鎮</h1>
+                    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-brand-darkText">王國鎮</h1>
                     <p class="text-brand-accent font-semibold text-xl">David Wang</p>
-                    <div class="inline-flex items-center gap-2 mt-2 px-3 py-1 bg-brand-creamCard text-brand-accent text-xs font-semibold rounded-full w-fit border border-[#E2D8C5]">
-                        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> 設備管理 & AI 跨界專才
+                    <div class="inline-flex items-center gap-2 mt-2 px-3 py-1 bg-brand-creamCard text-brand-accent text-sm font-semibold rounded-full w-fit border border-[#E2D8C5]">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i> 設備管理 & AI 跨界專才
                     </div>
                 </div>
                 <div class="relative flex-shrink-0 self-center sm:self-auto">
-                    <img src="image/AA001.jpg" id="profile-img" onerror="handleImageError(this)" class="w-28 h-28 md:w-32 md:h-32 object-cover rounded-2xl border-4 border-brand-accent/20 hover:border-brand-accent shadow-md transition duration-300 hover:scale-105" alt="王國鎮 David">
-                    <div id="avatar-fallback" class="hidden w-28 h-28 md:w-32 md:h-32 rounded-2xl bg-brand-accent flex flex-col items-center justify-center text-white text-3xl font-bold shadow-md">
+                    <img src="image/AA001.jpg" id="profile-img" onerror="handleImageError(this)" class="w-32 h-32 object-cover rounded-2xl border-4 border-brand-accent/20 shadow-md transition duration-300 hover:scale-105" alt="王國鎮 David">
+                    <div id="avatar-fallback" class="hidden w-32 h-32 rounded-2xl bg-brand-accent items-center justify-center text-white text-3xl font-bold shadow-md">
                         <span>國鎮</span>
                     </div>
                 </div>
@@ -62,49 +62,67 @@
 
         <!-- 2. 關於我 -->
         <section class="flex flex-col gap-4">
-            <h2 class="text-xs font-semibold tracking-wider uppercase text-brand-accent flex items-center gap-2">
+            <h2 class="text-xs font-bold tracking-widest uppercase text-brand-accent flex items-center gap-2">
                 <i data-lucide="user" class="w-4 h-4"></i> 關於我 / Profile
             </h2>
             <div class="text-base md:text-lg leading-relaxed text-brand-mutedText">
-                <p>畢業於<span class="text-brand-darkText font-semibold">清雲科技大學資訊工程系</span>，曾於<span class="text-brand-darkText font-semibold">日月光半導體</span>擔任設備工程師逾 10 年，具備自動化設備維護與產線優化經驗。近期完成<span class="text-brand-darkText font-semibold">「數位辦公與 AI 應用培訓」</span>，結合工程嚴謹度與 AI 創新數位力，為企業帶來穩定高效的價值。</p>
+                <p>畢業於 <span class="text-brand-darkText font-semibold">清雲科技大學資訊工程系</span>，曾於 <span class="text-brand-darkText font-semibold">日月光半導體</span> 擔任設備工程師逾 10 年。近期完成 <span class="text-brand-darkText font-semibold">健行科大「數位辦公與 AI 應用培訓」</span>，結合工程嚴謹度與 AI 創新數位力，並取得 <span class="text-brand-darkText font-semibold">Gemini Certified Educator</span> 及 <span class="text-brand-darkText font-semibold">MOS Excel Expert</span> 證照，期許能為團隊帶來穩定高效的價值。</p>
+            </div>
+        </section>
+
+        <!-- 新增: 工作經歷 -->
+        <section class="flex flex-col gap-6">
+            <h2 class="text-xs font-bold tracking-widest uppercase text-brand-accent flex items-center gap-2">
+                <i data-lucide="briefcase" class="w-4 h-4"></i> 工作經歷 / Experience
+            </h2>
+            <div class="bg-white p-6 md:p-8 rounded-3xl border border-[#E9E1D3] shadow-sm">
+                <h3 class="text-xl font-bold text-brand-darkText">設備工程師 | 日月光半導體</h3>
+                <p class="text-sm text-brand-mutedText mb-4">2010.05 - 2021.05</p>
+                <ul class="list-disc list-inside text-brand-mutedText space-y-2 text-sm md:text-base leading-relaxed">
+                    <li>機台預防保養與故障排除：精通 TOWA 各系列機構，落實金屬模面清潔與耗材更換。</li>
+                    <li>提升設備稼動率：優化 MTBA 與參數設定，有效達成 OEE 與產能最大化目標。</li>
+                    <li>工安與 5S 管理：嚴格執行 LOTO 程序，降低工安風險並維持高效工作現場。</li>
+                    <li>SOP 編製與傳承：將維修經驗轉化為 SOP 建立案例庫，縮短新人學習曲線。</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 新增: 自傳 -->
+        <section class="flex flex-col gap-4">
+            <h2 class="text-xs font-bold tracking-widest uppercase text-brand-accent flex items-center gap-2">
+                <i data-lucide="book-open" class="w-4 h-4"></i> 自傳 / Biography
+            </h2>
+            <div class="text-base leading-relaxed text-brand-mutedText bg-brand-creamCard/50 p-6 rounded-2xl italic">
+                我叫王國鎮，定居於桃園平鎮。自幼對機械結構與電子邏輯運作產生濃厚興趣，養成「打破砂鍋問到底」的探究精神。在資工系的訓練下，我具備優異的數據分析與系統邏輯思考能力，並將此優勢應用於十年半導體設備工程生涯中。面對產線高壓與精密製程需求，我不僅精於故障排除與參數調校，更能透過硬體改裝將 MTTR 縮減 15%。展望未來，我將秉持「精準、效率、品質」原則，把過去深厚的設備管理經驗，結合 AI 數位力，為企業創造持續性的營運效益。
             </div>
         </section>
 
         <!-- 3. 聯絡資訊 -->
         <section class="bg-brand-creamCard p-8 rounded-3xl border border-[#E9E1D3] flex flex-col gap-6">
-            <h2 class="text-2xl font-bold">與我聯絡</h2>
+            <h2 class="text-2xl font-bold text-brand-darkText">聯絡資訊</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="flex items-center justify-between p-4 bg-white/55 rounded-xl hover:bg-white transition duration-200 group col-span-1 md:col-span-2">
-                    <a href="mailto:wangguojen@gmail.com" class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent"><i data-lucide="mail" class="w-5 h-5"></i></div>
-                        <div><span class="text-xs text-brand-mutedText block">電子郵件</span><span class="text-base font-semibold text-brand-darkText">wangguojen@gmail.com</span></div>
-                    </a>
-                </div>
-                <div class="flex items-center gap-4 p-4 bg-white/55 rounded-xl"><div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent"><i data-lucide="map-pin" class="w-5 h-5"></i></div><div><span class="text-xs text-brand-mutedText block">居住地區</span><span class="text-base font-semibold text-brand-darkText">桃園市平鎮區</span></div></div>
-                <a href="https://line.me/ti/p/~wangguojen" target="_blank" class="flex items-center gap-4 p-4 bg-white/55 rounded-xl hover:bg-white transition duration-200"><div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent"><i data-lucide="message-square" class="w-5 h-5"></i></div><div><span class="text-xs text-brand-mutedText block">LINE 聯絡</span><span class="text-base font-semibold text-brand-darkText">ID: wangguojen</span></div></a>
-                <div class="flex items-center gap-4 p-4 bg-white/55 rounded-xl"><div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent"><i data-lucide="award" class="w-5 h-5"></i></div><div><span class="text-xs text-brand-mutedText block">專業證照 / 培訓</span><span class="text-base font-semibold text-brand-darkText">數位辦公與 AI 應用培訓</span></div></div>
-                <div class="flex items-center gap-4 p-4 bg-white/55 rounded-xl"><div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent"><i data-lucide="graduation-cap" class="w-5 h-5"></i></div><div><span class="text-xs text-brand-mutedText block">學歷背景</span><span class="text-base font-semibold text-brand-darkText">清雲科技大學 資工系</span></div></div>
-                <div class="flex items-center gap-4 p-4 bg-white/55 rounded-xl col-span-1 md:col-span-2"><div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent"><i data-lucide="briefcase" class="w-5 h-5"></i></div><div><span class="text-xs text-brand-mutedText block">應徵職務</span><span class="text-base font-semibold text-brand-darkText">技術員、行政助理</span></div></div>
+                <a href="mailto:wangguojen@gmail.com" class="flex items-center gap-4 p-4 bg-white/60 rounded-xl hover:bg-white transition col-span-1 md:col-span-2">
+                    <div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent"><i data-lucide="mail" class="w-5 h-5"></i></div>
+                    <div><span class="text-xs text-brand-mutedText block">電子郵件</span><span class="text-base font-semibold text-brand-darkText">wangguojen@gmail.com</span></div>
+                </a>
+                <div class="flex items-center gap-4 p-4 bg-white/60 rounded-xl"><div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent"><i data-lucide="briefcase" class="w-5 h-5"></i></div><div><span class="text-xs text-brand-mutedText block">應徵職務</span><span class="text-base font-semibold text-brand-darkText">行政/技術員(身障職缺)</span></div></div>
+                <a href="https://line.me/ti/p/~wangguojen" target="_blank" class="flex items-center gap-4 p-4 bg-white/60 rounded-xl hover:bg-white transition"><div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent"><i data-lucide="message-square" class="w-5 h-5"></i></div><div><span class="text-xs text-brand-mutedText block">LINE ID</span><span class="text-base font-semibold text-brand-darkText">wangguojen</span></div></a>
+                <div class="flex items-center gap-4 p-4 bg-white/60 rounded-xl"><div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent"><i data-lucide="laptop" class="w-5 h-5"></i></div><div><span class="text-xs text-brand-mutedText block">電腦技能</span><span class="text-base font-semibold text-brand-darkText">Word, Excel, PowerPoint</span></div></div>
+                <div class="flex items-center gap-4 p-4 bg-white/60 rounded-xl"><div class="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent"><i data-lucide="graduation-cap" class="w-5 h-5"></i></div><div><span class="text-xs text-brand-mutedText block">學歷背景</span><span class="text-base font-semibold text-brand-darkText">清雲科大 資工系</span></div></div>
             </div>
         </section>
 
-        <!-- 4. 個人證照 -->
-        <section class="flex flex-col gap-6 animate-fade-in">
-            <h2 class="text-xs font-semibold tracking-wider uppercase text-brand-accent flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> 專業證照 / Certificates</h2>
-            <div class="bg-[#F4EFE6] border border-[#E9E1D3] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 hover:shadow-lg transition">
-                <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-2xl bg-[#EFE9DD] flex items-center justify-center text-[#8C6239] shrink-0"><i data-lucide="graduation-cap" class="w-6 h-6"></i></div><h3 class="text-lg md:text-xl font-bold text-brand-darkText">個人證照</h3></div>
-                <a href="https://wangguojen-alt.github.io/WANG-USE/" target="_blank" class="w-full md:w-auto inline-flex items-center justify-center gap-3 px-6 py-4 bg-brand-accent hover:bg-[#734e2c] text-white font-bold rounded-2xl transition group"><span class="whitespace-nowrap">證照</span><i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i></a>
-            </div>
-        </section>
-
-        <!-- 5. 個人作品集 -->
-        <section class="flex flex-col gap-6 animate-fade-in">
-            <h2 class="text-xs font-semibold tracking-wider uppercase text-brand-accent flex items-center gap-2"><i data-lucide="globe" class="w-4 h-4"></i> 線上作品集 / Online Portfolio</h2>
-            <div class="bg-[#F4EFE6] border border-[#E9E1D3] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 hover:shadow-lg transition">
-                <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-2xl bg-[#EFE9DD] flex items-center justify-center text-[#8C6239] shrink-0"><i data-lucide="folder-heart" class="w-6 h-6"></i></div><h3 class="text-lg md:text-xl font-bold text-brand-darkText">個人作品集</h3></div>
-                <a href="https://wangguojen-alt.github.io/QQQ-XD/" target="_blank" class="w-full md:w-auto inline-flex items-center justify-center gap-3 px-6 py-4 bg-brand-accent hover:bg-[#734e2c] text-white font-bold rounded-2xl transition group"><span class="whitespace-nowrap">作品集</span><i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i></a>
-            </div>
-        </section>
+        <!-- 4. 作品集與證照 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <section class="bg-white border border-[#E9E1D3] rounded-3xl p-6 flex flex-col gap-4">
+                <h2 class="text-xs font-bold tracking-widest uppercase text-brand-accent flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> 專業證照</h2>
+                <a href="https://wangguojen-alt.github.io/WANG-USE/" target="_blank" class="text-lg font-bold text-brand-darkText hover:text-brand-accent transition">查看證照資料庫 →</a>
+            </section>
+            <section class="bg-white border border-[#E9E1D3] rounded-3xl p-6 flex flex-col gap-4">
+                <h2 class="text-xs font-bold tracking-widest uppercase text-brand-accent flex items-center gap-2"><i data-lucide="folder-heart" class="w-4 h-4"></i> 作品集</h2>
+                <a href="https://wangguojen-alt.github.io/QQQ-XD/" target="_blank" class="text-lg font-bold text-brand-darkText hover:text-brand-accent transition">查看個人作品集 →</a>
+            </section>
+        </div>
     </main>
 
     <footer class="text-center py-8 border-t border-[#E9E1D3] text-xs text-brand-mutedText">
@@ -115,8 +133,9 @@
         lucide.createIcons();
         function handleImageError(img) {
             img.style.display = 'none';
-            document.getElementById('avatar-fallback').classList.remove('hidden');
-            document.getElementById('avatar-fallback').classList.add('flex');
+            const fallback = document.getElementById('avatar-fallback');
+            fallback.classList.remove('hidden');
+            fallback.classList.add('flex');
         }
     </script>
 </body>
